@@ -23,6 +23,7 @@ const studentRoutes = require('./routes/studentRoutes');
 const announcementRoutes = require('./routes/announcementRoutes');
 const advertisementRoutes = require('./routes/advertisementRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
+const winnerRoutes = require('./routes/winnerRoutes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/admins', adminRoutes);
@@ -33,6 +34,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/announcements', announcementRoutes);
 app.use('/api/advertisements', advertisementRoutes);
 app.use('/api/settings', settingsRoutes);
+app.use('/api/winners', winnerRoutes);
 
 // Statically serve the uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
