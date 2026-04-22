@@ -1,0 +1,164 @@
+
+> frontend@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.7 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 9 errors:
+./src/app/admin/dashboard/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |                    ^^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Users, 
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/dashboard/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |          ^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Users, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/exams/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |                    ^^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Plus, 
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/exams/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |          ^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Plus, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/students/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |                    ^^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Users, 
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/students/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |          ^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Users, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/winners/page.tsx:1:20
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |                    ^^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Trophy, 
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/admin/winners/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useState, useEffect } from 'react';
+    |          ^^^^^^^^
+  2 | import { motion } from 'framer-motion';
+  3 | import { 
+  4 |     Trophy, 
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./src/app/student/exams/[id]/page.tsx:3:1
+Module not found: Can't resolve 'react-motion'
+  1 | "use client";
+  2 | import React, { useState, useEffect } from 'react';
+> 3 | import { motion, AnimatePresence } from 'react-motion';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { 
+  5 |     Clock, 
+  6 |     ChevronLeft, 
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/student/exams/[id]/page.tsx [Client Component Browser]
+    ./src/app/student/exams/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/student/exams/[id]/page.tsx [Client Component SSR]
+    ./src/app/student/exams/[id]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/admin/dashboard/page.tsx:1:20)
+    at <unknown> (./src/app/admin/dashboard/page.tsx:1:10)
+    at <unknown> (./src/app/admin/exams/page.tsx:1:20)
+    at <unknown> (./src/app/admin/exams/page.tsx:1:10)
+    at <unknown> (./src/app/admin/students/page.tsx:1:20)
+    at <unknown> (./src/app/admin/students/page.tsx:1:10)
+    at <unknown> (./src/app/admin/winners/page.tsx:1:20)
+    at <unknown> (./src/app/admin/winners/page.tsx:1:10)
+    at <unknown> (./src/app/student/exams/[id]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ec5b13; /* Talentley Orange */
+  --color-primary-light: #ff8c42;
+  --color-primary-dark: #b13e00;
+  --color-secondary: #6366f1; /* Indigo for better mix with orange */
+  --color-background-light: #ffffff;
+  --color-background-dark: #0f172a;
+  
+  --font-sans: var(--font-outfit), var(--font-public-sans), var(--font-geist-sans);
+  --font-display: var(--font-outfit), sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+:root {
+  --background: #f8f6f6;
+  --foreground: #0f172a;
+  --glass: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --background: #221610;
+  --foreground: #f8f6f6;
+  --glass: rgba(34, 22, 16, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #ec5b13 0%, #ff8c42 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ec5b13 0%, #ff8c42 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #ec5b13 0%, #ff8c42 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.orange-glow {
+  box-shadow: 0 0 50px -10px rgba(236, 91, 19, 0.3);
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #ec5b13, #ff8c42, #ec5b13);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(236, 91, 19, 0.15) 0%, rgba(236, 91, 19, 0) 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.bento-card {
+  @apply bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+}
